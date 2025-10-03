@@ -25,6 +25,7 @@
 #include "delay.h"
 #include "key.h"
 #include "led.h"
+#include "morse.h"
 #include "exti.h"
 
 /* USER CODE END Includes */
@@ -104,11 +105,11 @@ int main(void) {
     /* USER CODE BEGIN WHILE */
 
     while (1) {
-        // key = key_scan(0);
-        // morse_message();
-        // led_toggle(1);
+        if (!morse_is_stopped()) {
+            morse_message();
+        }
 
-        HAL_Delay(10);
+        delay_ms(50);
 
         /* USER CODE END WHILE */
 
