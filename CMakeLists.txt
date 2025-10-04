@@ -44,6 +44,7 @@ add_executable(${CMAKE_PROJECT_NAME}
     Lib/morse/morse.c
     Lib/exti/exti.h
     Lib/exti/exti.c
+    Core/Src/exti.c
 )
 
 # Add STM32CubeMX generated sources
