@@ -3,4 +3,4 @@
 
 void EXTI_Init(void);
 
-#endif //STM32_LIB_EXTI_H
+#endif // STM32_LIB_EXTI_H

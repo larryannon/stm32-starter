@@ -3,4 +3,4 @@
 
 #include "stm32h7xx_hal.h"
 
-#endif //STM32_LIB_SYS_H
+#endif // STM32_LIB_SYS_H

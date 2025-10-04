@@ -11,4 +11,4 @@ void delay_us(uint32_t Delay);
 
 void HAL_Delay(uint32_t Delay);
 
-#endif //STM32_LIB_DELAY_H
+#endif // STM32_LIB_DELAY_H

@@ -1,7 +1,9 @@
 #ifndef STM32_LIB_MORSE_H
 #define STM32_LIB_MORSE_H
 
-#define MORSE_DELAY_MS_UNIT 200  // unit delay time ms
+#include "sys/sys.h"
+
+#define MORSE_DELAY_MS_UNIT 200 // unit delay time ms
 
 void morse_begin(void);
 
@@ -11,4 +13,4 @@ uint8_t morse_is_stopped(void);
 
 void morse_message();
 
-#endif //STM32_LIB_MORSE_H
+#endif // STM32_LIB_MORSE_H

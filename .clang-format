@@ -1,0 +1,13 @@
+BasedOnStyle: LLVM
+IndentWidth: 2
+UseTab: Never
+
+BreakBeforeBraces: Attach
+
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortLoopsOnASingleLine: true
+
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AlignOperands: true
+AlignTrailingComments: true
