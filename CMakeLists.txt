@@ -14,9 +14,9 @@ set(CMAKE_C_EXTENSIONS ON)
 
 
 # Define the build type
-if(NOT CMAKE_BUILD_TYPE)
+if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug")
-endif()
+endif ()
 
 # Set the project name
 set(CMAKE_PROJECT_NAME stm32-starter)
@@ -28,6 +28,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 # Include toolchain file !REQUIRED
+include("cmake/gcc-arm-none-eabi.cmake")
 
 # Core project settings
 project(${CMAKE_PROJECT_NAME})
@@ -42,13 +43,13 @@ add_executable(${CMAKE_PROJECT_NAME}
     Core/Src/led.c
     Core/Inc/morse.h
     Core/Src/morse.c
-        Core/Inc/key.h
-        Core/Src/key.c
-        Core/Inc/sys.h
-        Core/Src/exti.c
-        Core/Inc/exti.h
-        Core/Inc/delay.h
-        Core/Src/delay.c
+    Core/Inc/key.h
+    Core/Src/key.c
+    Core/Inc/sys.h
+    Core/Src/exti.c
+    Core/Inc/exti.h
+    Core/Inc/delay.h
+    Core/Src/delay.c
 )
 
 # Add STM32CubeMX generated sources
