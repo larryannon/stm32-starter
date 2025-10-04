@@ -1,7 +1,7 @@
-#ifndef STM32_STARTER_DELAY_H
-#define STM32_STARTER_DELAY_H
+#ifndef STM32_LIB_DELAY_H
+#define STM32_LIB_DELAY_H
 
-#include "sys.h"
+#include "sys/sys.h"
 
 void DELAY_Init();
 
@@ -11,4 +11,4 @@ void delay_us(uint32_t Delay);
 
 void HAL_Delay(uint32_t Delay);
 
-#endif //STM32_STARTER_DELAY_H
+#endif //STM32_LIB_DELAY_H

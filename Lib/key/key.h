@@ -1,7 +1,7 @@
-#ifndef STM32_STARTER_KEY_H
-#define STM32_STARTER_KEY_H
+#ifndef STM32_LIB_KEY_H
+#define STM32_LIB_KEY_H
 
-#include "sys.h"
+#include "sys/sys.h"
 
 #define KEY0_GPIO_PORT         GPIOH
 #define KEY0_GPIO_PIN          GPIO_PIN_3
@@ -35,6 +35,4 @@
 
 void KEY_Init(void);
 
-uint8_t key_scan(uint8_t mode);
-
-#endif //STM32_STARTER_KEY_H
+#endif //STM32_LIB_KEY_H

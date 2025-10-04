@@ -24,12 +24,6 @@ set(CMAKE_PROJECT_NAME stm32-starter)
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 
-# Tell CMake to use static library for compiler tests !REQUIRED
-set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
-
-# Include toolchain file !REQUIRED
-include("cmake/gcc-arm-none-eabi.cmake")
-
 # Core project settings
 project(${CMAKE_PROJECT_NAME})
 message("Build type: " ${CMAKE_BUILD_TYPE})
@@ -39,17 +33,17 @@ enable_language(C ASM)
 
 # Create an executable object type
 add_executable(${CMAKE_PROJECT_NAME}
-    Core/Inc/led.h
-    Core/Src/led.c
-    Core/Inc/morse.h
-    Core/Src/morse.c
-    Core/Inc/key.h
-    Core/Src/key.c
-    Core/Inc/sys.h
-    Core/Src/exti.c
-    Core/Inc/exti.h
-    Core/Inc/delay.h
-    Core/Src/delay.c
+    Lib/sys/sys.h
+    Lib/delay/delay.h
+    Lib/delay/delay.c
+    Lib/key/key.h
+    Lib/key/key.c
+    Lib/led/led.h
+    Lib/led/led.c
+    Lib/morse/morse.h
+    Lib/morse/morse.c
+    Lib/exti/exti.h
+    Lib/exti/exti.c
 )
 
 # Add STM32CubeMX generated sources
@@ -68,6 +62,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
+    ${CMAKE_SOURCE_DIR}/Lib
 )
 
 # Add project symbols (macros)

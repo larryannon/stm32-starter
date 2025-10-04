@@ -22,11 +22,11 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "delay.h"
-#include "key.h"
-#include "led.h"
-#include "morse.h"
-#include "exti.h"
+#include "delay/delay.h"
+#include "key/key.h"
+#include "led/led.h"
+#include "morse/morse.h"
+#include "exti/exti.h"
 
 /* USER CODE END Includes */
 

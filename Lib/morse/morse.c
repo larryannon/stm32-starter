@@ -1,6 +1,6 @@
-#include "sys.h"
-#include "delay.h"
-#include "led.h"
+#include "sys/sys.h"
+#include "delay/delay.h"
+#include "led/led.h"
 #include "morse.h"
 
 volatile uint8_t morse_stop_request = 0;
