@@ -45,6 +45,8 @@ add_executable(${CMAKE_PROJECT_NAME}
     Lib/exti/exti.h
     Lib/exti/exti.c
     Core/Src/exti.c
+    Core/Inc/tim_callback.h
+    Core/Src/tim_callback.c
 )
 
 # Add STM32CubeMX generated sources
